@@ -1,0 +1,7 @@
+[user]
+	email = myislin@gmail.com
+	name = Chien Yu Lin
+[color]
+	ui = always
+[core]
+	editor = vim
