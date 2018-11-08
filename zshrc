@@ -59,16 +59,19 @@ autoload -U colors && colors
 setopt prompt_subst # substitute vairables in prompt at runtime
 
 exitstatus_color="%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})"
-PROMPT="${exitstatus_color}┌%{$reset_color%}"
-PROMPT+="\$(virtualenv_info)"
-PROMPT+="%{$fg_bold[cyan]%}%n%{$reset_color%}" # username
+# PROMPT="${exitstatus_color}[%{$reset_color%}"
+PROMPT="\$(virtualenv_info)"
+PROMPT+="%{$fg_bold[cyan]%}[%n%{$reset_color%}" # username
 PROMPT+="%{$fg_bold[green]%}@%{$reset_color%}" # @
 PROMPT+="%{$fg_bold[magenta]%}%m%{$reset_color%}" # hostname
 PROMPT+="%{$fg_bold[cyan]%}:%{$reset_color%}" # :
 PROMPT+="%{$fg_bold[green]%}%~%{$reset_color%}" # working directory
 # second line
 PROMPT+="
-${exitstatus_color}└%(#.#.>)%{$reset_color%} "
+%{$fg_bold[cyan]%}$%{$reset_color%} "
+# PROMPT+="
+# ${exitstatus_color}$%{$reset_color%} "
+# ${exitstatus_color}└%(#.#.>)%{$reset_color%} "
 unset exitstatus_color
 
 RPROMPT=
@@ -124,3 +127,16 @@ ranger() {
 
 # export $term value for 256 color
 export TERM=xterm-256color
+
+# Add python path for TVM project
+export TVM_HOME=~/Projects/tvm
+export PYTHONPATH=$TVM_HOME/python:$TVM_HOME/topi/python:$TVM_HOME/nnvm/python:$TVM_HOME/vta/python:${PYTHONPATH}
+
+# Setup Vivaldo
+export XILINX_PATH=/home/cylinbao/Xilinx
+export XILINX_VIVADO=${XILINX_PATH}/Vivado/2018.2
+export PATH=${XILINX_VIVADO}/bin:${PATH}
+
+# Setup VTA PYNQ
+export VTA_PYNQ_RPC_HOST=192.168.2.99
+export VTA_PYNQ_RPC_PORT=9091

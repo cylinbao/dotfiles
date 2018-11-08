@@ -4,20 +4,18 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-"Plugin 'VundleVim/Vundle.vim'
-Plugin 'pangloss/vim-javascript'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'changyuheng/color-scheme-holokai-for-vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'vim-scripts/ctags.vim'
-"Plugin 'vim-scripts/cscope.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'jvirtanen/vim-octave'
+Plugin 'vim-airline/vim-airline'
 call vundle#end()
 
 filetype plugin indent on
 
-colorscheme holokai
+set termguicolors
+colorscheme gruvbox
 
 " Set ctags tags file path
 set tags=./tags,tags;$Home
@@ -36,11 +34,13 @@ set sw=2
 set tabstop=2
 set encoding=utf-8
 set mouse=a
+set number
 
 set statusline=%<\ [%F]
 set statusline+=%m
 set statusline+=%=\ {\ \%l,\%c\ \}\ \[\ %P\ \]
 
+set t_Co=256
 syntax on
 
 if v:version >= 703
