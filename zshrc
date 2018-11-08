@@ -65,7 +65,7 @@ PROMPT+="%{$fg_bold[cyan]%}[%n%{$reset_color%}" # username
 PROMPT+="%{$fg_bold[green]%}@%{$reset_color%}" # @
 PROMPT+="%{$fg_bold[magenta]%}%m%{$reset_color%}" # hostname
 PROMPT+="%{$fg_bold[cyan]%}:%{$reset_color%}" # :
-PROMPT+="%{$fg_bold[green]%}%~%{$reset_color%}" # working directory
+PROMPT+="%{$fg_bold[green]%}%~]%{$reset_color%}" # working directory
 # second line
 PROMPT+="
 %{$fg_bold[cyan]%}$%{$reset_color%} "

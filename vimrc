@@ -5,17 +5,29 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'easymotion/vim-easymotion'
-Plugin 'morhetz/gruvbox'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'morhetz/gruvbox'
+Plugin 'ayu-theme/ayu-vim'
+Plugin 'crusoexia/vim-monokai'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'powerline/powerline'
 call vundle#end()
 
 filetype plugin indent on
 
+set t_Co=256
+syntax on
+
 set termguicolors
-colorscheme gruvbox
+let ayucolor="mirage"
+colorscheme ayu
+
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
 
 " Set ctags tags file path
 set tags=./tags,tags;$Home
@@ -39,9 +51,6 @@ set number
 set statusline=%<\ [%F]
 set statusline+=%m
 set statusline+=%=\ {\ \%l,\%c\ \}\ \[\ %P\ \]
-
-set t_Co=256
-syntax on
 
 if v:version >= 703
 	set cc=81
