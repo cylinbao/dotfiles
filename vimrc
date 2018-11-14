@@ -10,6 +10,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'morhetz/gruvbox'
 Plugin 'ayu-theme/ayu-vim'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -22,12 +23,13 @@ set t_Co=256
 syntax on
 
 set termguicolors
-let ayucolor="mirage"
-colorscheme ayu
+"let ayucolor="light"
+set background=dark
+colorscheme gruvbox
 
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
+let g:airline_theme='gruvbox'
 
 " Set ctags tags file path
 set tags=./tags,tags;$Home
@@ -42,8 +44,10 @@ set cursorline
 set noshowmatch
 set wildmenu
 set laststatus=2 
-set sw=2
-set tabstop=2
+set tabstop=8
+set expandtab
+set shiftwidth=4
+set softtabstop=4
 set encoding=utf-8
 set mouse=a
 set number
@@ -53,7 +57,7 @@ set statusline+=%m
 set statusline+=%=\ {\ \%l,\%c\ \}\ \[\ %P\ \]
 
 if v:version >= 703
-	set cc=81
+	"set cc=81
 	"hi ColorColumn ctermbg=lightgrey ctermfg=grey 
 endif
 
