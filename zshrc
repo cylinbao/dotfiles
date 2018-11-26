@@ -110,7 +110,19 @@ alias ........="cd ../../../../../../../"       # 7
 alias .........="cd ../../../../../../../../"   # 8
 # }}}
 
-alias ls="ls --color=auto"
+case `uname` in
+  Darwin)
+    # commands for OS X go here
+		alias ls="ls -G"
+  ;;
+  Linux)
+    # commands for Linux go here
+		alias ls="ls --color=auto"
+  ;;
+  FreeBSD)
+    # commands for FreeBSD go here
+  ;;
+esac
 
 # ranger wrapper: start new instance only if it's not in the current shell
 ranger() {
