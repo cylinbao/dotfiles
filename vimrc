@@ -24,7 +24,6 @@ syntax on
 
 set term=screen-256color
 set termguicolors
-"let ayucolor="light"
 set background=dark
 colorscheme gruvbox
 
