@@ -111,6 +111,7 @@ alias .........="cd ../../../../../../../../"   # 8
 # }}}
 
 alias ls="ls --color=auto"
+alias tmux='tmux -2'
 
 # ranger wrapper: start new instance only if it's not in the current shell
 ranger() {
@@ -126,7 +127,7 @@ ranger() {
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # export $term value for 256 color
-export TERM=xterm-256color
+export TERM=screen-256color
 
 # Add python path for TVM project
 export TVM_HOME=~/Projects/tvm

@@ -22,6 +22,7 @@ filetype plugin indent on
 set t_Co=256
 syntax on
 
+set term=screen-256color
 set termguicolors
 "let ayucolor="light"
 set background=dark
@@ -59,6 +60,10 @@ set statusline+=%=\ {\ \%l,\%c\ \}\ \[\ %P\ \]
 if v:version >= 703
 	"set cc=81
 	"hi ColorColumn ctermbg=lightgrey ctermfg=grey 
+endif
+
+if &term =~ '256color'
+    set t_ut=
 endif
 
 "---------- EasyMotion Settings ----------"
