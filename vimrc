@@ -23,7 +23,7 @@ set t_Co=256
 syntax on
 
 set term=screen-256color
-set termguicolors
+"set termguicolors
 set background=dark
 colorscheme gruvbox
 
