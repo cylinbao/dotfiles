@@ -1,6 +1,5 @@
 #!/bin/sh
 
-sudo apt install git zsh vim tmux
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 mv -f ~/dotfiles ~/.dotfiles
