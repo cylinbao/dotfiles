@@ -141,16 +141,3 @@ ranger() {
 
 # export $term value for 256 color
 export TERM=screen-256color
-
-# Add python path for TVM project
-export TVM_HOME=~/Projects/tvm
-export PYTHONPATH=$TVM_HOME/python:$TVM_HOME/topi/python:$TVM_HOME/nnvm/python:$TVM_HOME/vta/python:${PYTHONPATH}
-
-# Setup Vivaldo
-export XILINX_PATH=/home/cylinbao/Xilinx
-export XILINX_VIVADO=${XILINX_PATH}/Vivado/2018.2
-export PATH=${XILINX_VIVADO}/bin:${PATH}
-
-# Setup VTA PYNQ
-export VTA_PYNQ_RPC_HOST=192.168.2.99
-export VTA_PYNQ_RPC_PORT=9091
